@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Financial Details</title>
+    <style>
+        /* Style for table and table cells */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Financial Details</h2>
+    
+    <!-- Table to organize forms -->
+    <table>
+        <tr>
+            <!-- Donation Form -->
+            <td>
+                <h3>Donation</h3>
+                <form action="donation.php" method="post">
+                    <label for="donation_member_id">Member ID:</label>
+                    <input type="text" id="donation_member_id" name="donation_member_id" required><br><br>
+                    
+                    <label for="donation_amount">Amount:</label>
+                    <input type="number" id="donation_amount" name="donation_amount" required><br><br>
+                    
+                    <label for="donation_date">Donation Date:</label>
+                    <input type="date" id="donation_date" name="donation_date" required><br><br>
+                    
+                    <label for="donation_purpose">Purpose:</label>
+                    <input type="text" id="donation_purpose" name="donation_purpose"><br><br>
+                    
+                    <label for="donation_payment_method">Payment Method:</label>
+                    <select id="donation_payment_method" name="donation_payment_method" required>
+                        <option value="Cash">Cash</option>
+                        <option value="Check">Check</option>
+                        <option value="Credit Card">Credit Card</option>
+                    </select><br><br>
+                    
+                    <input type="submit" value="Submit Donation">
+                </form>
+            </td>
+            
+            <!-- Pledge Form -->
+            <td>
+                <h3>Pledge</h3>
+                <form action="pledge.php" method="post">
+                    <label for="pledge_member_id">Member ID:</label>
+                    <input type="text" id="pledge_member_id" name="pledge_member_id" required><br><br>
+                    
+                    <label for="pledge_amount">Amount:</label>
+                    <input type="number" id="pledge_amount" name="pledge_amount" required><br><br>
+                    
+                    <label for="pledge_date">Pledge Date:</label>
+                    <input type="date" id="pledge_date" name="pledge_date" required><br><br>
+                    
+                    <input type="submit" value="Submit Pledge">
+                </form>
+            </td>
+            
+            <!-- Contribution Form -->
+            <td>
+                <h3>Contribution</h3>
+                <form action="contribution.php" method="post">
+                    <label for="contribution_member_id">Member ID:</label>
+                    <input type="text" id="contribution_member_id" name="contribution_member_id" required><br><br>
+                    
+                    <label for="contribution_amount">Amount:</label>
+                    <input type="number" id="contribution_amount" name="contribution_amount" required><br><br>
+                    
+                    <label for="contribution_date">Contribution Date:</label>
+                    <input type="date" id="contribution_date" name="contribution_date" required><br><br>
+                    
+                    <label for="contribution_purpose">Purpose:</label>
+                    <input type="text" id="contribution_purpose" name="contribution_purpose"><br><br>
+                    
+                    <input type="submit" value="Submit Contribution">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
